@@ -1,0 +1,22 @@
+:root {
+    --header: #033f63;
+    --mainBackground: #FEDC97 ;
+    --cardHeader: #28666E;
+    --cardBackground: white ;
+}
+
+body{
+    background-color: var(--mainBackground);
+    margin: 0;
+  
+}
+.banner{
+    background-color: var(--header);
+    text-align: center;
+    align-content: center;
+    vertical-align: middle;
+    height: 4em;
+    color: white;
+    border-radius: 0.5em;
+    margin: 0;
+}

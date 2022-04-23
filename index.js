@@ -29,11 +29,11 @@ const promptUser = () => {
             message: 'What type of employee information would you like to enter?',
             choices: ['engineer', 'intern'],
         },
-        if (employeeType === 'engineer'){
-            [
+        // if (employeeType === 'engineer'){
+        //     [
                 
-            ]
-        }
+        //     ]
+        // }
     ])
     
 }
