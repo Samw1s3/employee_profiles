@@ -29,18 +29,13 @@ describe('Testing Employee Class', () => {
             const employee = new Employee (defaultId, defaultName, defaultEmail);
             
             expect(defaultEmail).toBeTruthy();
-            // set up environment
-
-            // define source of truth
-
-            // execute the code
-
-            // compare the result
-            
-            expect(true).toBe(false);
+                      
+         
         });
         
         test('should have name' , () => {
+            const employee = new Employee (defaultId, defaultName, defaultEmail);
+            
             expect(employee.name).toBeTruthy();
         });
         
@@ -56,9 +51,9 @@ describe('Testing Employee Class', () => {
         test('getEmail() should return email', () => {
             const employee = new Employee (defaultId, defaultName, defaultEmail);
 
-            getEmail(employee){
-                return employee.email;
-            }
+            // getEmail(employee){
+            //     return employee.email;
+            // }
 
             expect(employee.email).toBe("me@me.com");
         });

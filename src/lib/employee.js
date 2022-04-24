@@ -6,7 +6,8 @@ class Employee {
         throw new Error('Cannot instantiate without id name or email');
       }
       this.id = id;
-      this.name = name;this.email = email;
+      this.name = name;
+      this.email = email;
       
   }
   
