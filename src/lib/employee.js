@@ -27,8 +27,8 @@ class Employee {
     return 'Employee';
   }
 
-    printInfo() {
-      console.log(`${name}, id:${id}, their email address is ${email}`);
-    }
+    // printInfo() {
+    //   console.log(`${name}, id:${id}, their email address is ${email}`);
+    // }
   }
   module.exports = Employee;

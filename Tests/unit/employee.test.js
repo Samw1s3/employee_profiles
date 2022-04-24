@@ -40,27 +40,26 @@ describe('Testing Employee Class', () => {
         });
         
         test('should have id' , () => {
-            expect(true).toBe(false);
+            const employee = new Employee (defaultId, defaultName, defaultEmail);
+            
+            expect(employee.id).toBeTruthy();
         });
         test('getName() should return name', () => {
-            expect(true).toBe(false);
+            const employee = new Employee (defaultId, defaultName, defaultEmail);
+
+            expect(employee.getName()).toBe("Noob");
         });
         test('getId() should return id', () => {
-            expect(true).toBe(false);
+            const employee = new Employee (defaultId, defaultName, defaultEmail);
+
+            expect(employee.getId()).toBe(12);
         });
         test('getEmail() should return email', () => {
             const employee = new Employee (defaultId, defaultName, defaultEmail);
 
-            // getEmail(employee){
-            //     return employee.email;
-            // }
-
-            expect(employee.email).toBe("me@me.com");
+            expect(employee.getEmail()).toBe("me@me.com");
         });
-        //negative path
-        // test("Should break if i didn't pass in any arguments to the constructor", () => {
-        //     expect(true).toBe(false);
-        // })
+        
         test('Should have valid email' , () => {
             expect(true).toBe(false);
         });
