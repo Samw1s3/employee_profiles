@@ -7,13 +7,12 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Samw1s3/employee_profiles.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -21,6 +20,12 @@
   },
   "homepage": "https://github.com/Samw1s3/employee_profiles#readme",
   "dependencies": {
+    "@types/inquirer": "^8.2.1",
     "inquirer": "^8.2.2"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.2.1",
+    "@types/jest": "^27.4.1",
+    "jest": "^27.5.1"
   }
 }

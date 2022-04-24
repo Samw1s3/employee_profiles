@@ -26,8 +26,8 @@ const promptUser = () => {
         {
             type: 'list',
             name: 'employeeType',
-            message: 'What type of employee information would you like to enter?',
-            choices: ['engineer', 'intern'],
+            message: 'What type of team member would you like to add?',
+            choices: ['engineer', 'intern', 'manager'],
         },
         // if (employeeType === 'engineer'){
         //     [
