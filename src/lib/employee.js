@@ -9,7 +9,7 @@ class Employee {
       this.name = name;
       this.email = email;
       
-  }
+    }
   
   getEmail (){
     return this.email;
@@ -27,8 +27,5 @@ class Employee {
     return 'Employee';
   }
 
-    // printInfo() {
-    //   console.log(`${name}, id:${id}, their email address is ${email}`);
-    // }
-  }
+}
   module.exports = Employee;

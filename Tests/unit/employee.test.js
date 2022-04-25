@@ -60,8 +60,8 @@ describe('Testing Employee Class', () => {
             expect(employee.getEmail()).toBe("me@me.com");
         });
         
-        test('Should have valid email' , () => {
-            expect(true).toBe(false);
-        });
+        // test('Should have valid email' , () => {
+        //     expect(true).toBe(false);
+        // });
     })
 })

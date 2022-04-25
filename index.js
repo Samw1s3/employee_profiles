@@ -17,6 +17,19 @@ const promptUser = () => {
             type: 'input',
             name: 'managerEmail',
             message: "What is the team manager's email address?",
+            default: () => {},
+            validate: function (email) {
+    
+                valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+    
+                if (valid) {
+                  console.log("Great job");
+                    return true;
+                } else {
+                    console.log(".  Please enter a valid email")
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
@@ -26,8 +39,8 @@ const promptUser = () => {
         {
             type: 'list',
             name: 'employeeType',
-            message: 'What type of team member would you like to add?',
-            choices: ['engineer', 'intern', 'manager'],
+            message: 'What would you like to do next?',
+            choices: ['add engineer', 'add intern', 'add manager', 'finish building team'],
         },
         // if (employeeType === 'engineer'){
         //     [
