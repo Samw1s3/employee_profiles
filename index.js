@@ -1,10 +1,13 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateTeamMembers = require
+const generateTeamMembers = require("./src/page-template");
 
 const Engineer = require('./src/lib/engineer');
 const Manager = require('./src/lib/manager');
 const Intern = require('./src/lib/intern');
+
+//Array for new staff member data to go
+const newStaffMemberData = [];
 
 
 const promptUser = async () => {
@@ -30,7 +33,7 @@ const promptUser = async () => {
                 valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
     
                 if (valid) {
-                  console.log("Great job");
+                //   console.log("Great job");
                     return true;
                 } else {
                     console.log(".  Please enter a valid email")
@@ -42,7 +45,7 @@ const promptUser = async () => {
             type: 'list',
             name: 'role',
             message: "What is their role?", 
-            choices: ["Mangager", "Engineer", "Intern"],
+            choices: ["Manager", "Engineer", "Intern"],
         }, 
     ])
     
@@ -58,8 +61,8 @@ const promptUser = async () => {
             },        
             ])
             const newManager = new Manager (
-                answers.name,
                 answers.id,
+                answers.name,
                 answers.email,
                 managerAnswers.officeNumber
             );
@@ -75,8 +78,8 @@ const promptUser = async () => {
                 }
             ])
             const newEngineer = new Engineer (
-                answers.name,
                 answers.id,
+                answers.name,
                 answers.email,
                 engineerAnswers.github,
             );
@@ -94,8 +97,8 @@ const promptUser = async () => {
             ])
 
             const newIntern = new Intern(
-                answers.name,
                 answers.id,
+                answers.name,
                 answers.email,
                 internAnswers.school,
             );
@@ -118,9 +121,9 @@ async function promptQuestions(){
         ])
 
         if(addMemberAnswers.addMember === 'Add another team member') {
-            return promptQuestions();
+            return promptQuestions()
         }
-        return createTeam () 
+        return createTeam () ;
         
 }
 
@@ -129,11 +132,8 @@ promptQuestions();
 function createTeam () {
     console.log("new person", newStaffMemberData)
     fs.writeFileSync(
-        "./output/index.html",
+        "./dist/index.html",
         generateTeamMembers(newStaffMemberData),
         "utf-8"
-    )
-}
-
-
-        
+    );
+}  
