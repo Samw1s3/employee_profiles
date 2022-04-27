@@ -6,7 +6,7 @@ const generateTeamMembers = (team) => {
         <div class="card employee-card">
              <div class="card-header">
                 <h2 class="card-title">${manager.getName()}</h2>
-                <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${manager.getRole()}</h3>
+                <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i> ${manager.getRole()}</h3>
             </div>
             <div class="card-body">
                  <ul class="list-group">
@@ -24,7 +24,7 @@ const generateTeamMembers = (team) => {
         <div class="card employee-card">
             <div class="card-header">
                 <h2 class="card-title">${engineer.getName()}</h2>
-                <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${engineer.getRole()}</h3>
+                <h3 class="card-title"><i class="fas fa-glasses mr-2"></i> ${engineer.getRole()}</h3>
             </div>
             <div class="card-body">
                 <ul class="list-group">
@@ -42,7 +42,7 @@ const generateTeamMembers = (team) => {
         <div class="card employee-card">
             <div class="card-header">
                 <h2 class="card-title">${intern.getName()}</h2>
-                <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>${intern.getRole()}</h3>
+                <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i> ${intern.getRole()}</h3>
             </div>
             <div class="card-body">
                 <ul class="list-group">
@@ -89,21 +89,16 @@ module.exports = (team) => {
     <title>My Team</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c502137733.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind&family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="">
-        <div class="r">
-            <div class="">
-                <h1 class="">My Team</h1>
-            </div>
+    <div class="banner">
+            <h1 class="banner-h1"> 🧑‍💻 My Team 👩‍💻 </h1>
         </div>
-    </div>
-    <div class="">
-        <div class="">
-            <div class="">
+    <div class="team-cards">
                 ${generateTeamMembers(team)}
-            </div>
-        </div>
     </div>
 </body>
 </html>
