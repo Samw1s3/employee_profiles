@@ -1,4 +1,4 @@
-# Employee Profiles 
+# Employee Profiles Generator
 
 ## Licences 
 
